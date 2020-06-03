@@ -1,20 +1,17 @@
 const http = require('http');
 const fs = require('fs');
+const path = require('path');
 
 const port = process.env.PORT || 3000;
 
 const server = http.createServer((req, res) => {
-    fs.readFile('./public/index.html', (err, data) => {
-        if (err) {
-            console.error(`File reading error: ${err}`);
-        } else {
-            res.writeHead(200, {
-                'Content-Type': "text/html"
-            });
-            res.write(data, 'utf-8');
-            res.end();
-        }
+    const filePath = path.join(__dirname, 'public', 'index.html');
+    const readStream = fs.createReadStream(filePath);
+
+    res.writeHead(200, {
+        'Content-Type': "text/html"
     });
+    readStream.pipe(res);
 });
 
 server.listen(port, () => {

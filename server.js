@@ -15,12 +15,35 @@ const server = http.createServer((req, res) => {
             : url
     );
 
-    const readStream = fs.createReadStream(filePath);
+    const extName = path.extname(filePath);
+    console.log(`Extname: ${extName}`)
 
-    res.writeHead(200, {
-        'Content-Type': "text/html"
+    let contentType = 'text/html';
+
+    // Set correct content type for the header
+    switch (extName) {
+        case '.css':
+            contentType = 'text/css';
+            break;
+        case '.js':
+            contentType = 'text/javascript';
+            break;
+    }
+
+    console.log(`File path: ${filePath}`);
+    console.log(`Content type: ${contentType}`);
+
+    fs.readFile(filePath, (err, data) => {
+        if (err) {
+            console.log(`File reading error: ${err}`)
+        } else {
+            res.writeHead(200, {
+                'Content-Type': contentType
+            });
+            res.write(data);
+            res.end();
+        }
     });
-    readStream.pipe(res);
 });
 
 server.listen(port, () => {

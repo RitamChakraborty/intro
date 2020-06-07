@@ -5,7 +5,16 @@ const path = require('path');
 const port = process.env.PORT || 3000;
 
 const server = http.createServer((req, res) => {
-    const filePath = path.join(__dirname, 'public', 'index.html');
+    const url = req.url;
+
+    const filePath = path.join(
+        __dirname,
+        'public',
+        url === '/'
+            ? 'index.html'
+            : url
+    );
+
     const readStream = fs.createReadStream(filePath);
 
     res.writeHead(200, {

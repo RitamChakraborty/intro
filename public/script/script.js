@@ -11,4 +11,4 @@ setInterval(() => {
 
     helloContainer.innerHTML = `<p>${helloList[randIndex]}!</p>`;
     prev = randIndex;
-}, 500);
+}, 1000);

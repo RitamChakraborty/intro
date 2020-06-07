@@ -1,4 +1,5 @@
-const helloList = ["Hello", "Hola"];
+import {helloList} from "./hello_list.js";
+
 const helloContainer = document.getElementById('hello');
 let prev = 0;
 let randIndex = prev;

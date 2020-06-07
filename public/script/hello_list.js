@@ -18,3 +18,5 @@ const helloList = [
     "zdravo",
     "Ahoj"
 ];
+
+export {helloList};

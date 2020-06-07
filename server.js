@@ -28,6 +28,9 @@ const server = http.createServer((req, res) => {
         case '.js':
             contentType = 'text/javascript';
             break;
+        case '.ico':
+            contentType = 'image/ico';
+            break;
     }
 
     console.log(`File path: ${filePath}`);

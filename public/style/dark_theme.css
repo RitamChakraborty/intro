@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: whitesmoke;
+    background-color: darkslategray;
+}
+
+#container {
+    padding: 0 25%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+}
+
+#hello {
+    font-family: "Roboto Mono Light", sans-serif;
+    font-size: 48px;
+    height: 80px;
+}
+
+#name {
+    font-family: "Ubuntu", sans-serif;
+    font-size: 80px;
+    margin-bottom: 20px;
+}

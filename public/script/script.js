@@ -1,10 +1,9 @@
-import {toggleTheme} from "./dark_theme_switch.js";
+import {setTheme} from "./theme_setter.js";
+import {toggleTheme} from "./dark_theme_switcher.js";
 import {helloList} from "./hello_list.js";
 
-// Set primary color and background color
-const everything = document.querySelector("*");
-everything.style.color = "darkslategray";
-everything.style.backgroundColor = "whitesmoke";
+// Set primary theme from local storage data
+setTheme();
 
 // Change theme
 const themeSwitch = document.getElementById('brightness');

@@ -6,7 +6,6 @@ const port = process.env.PORT || 3000;
 
 const server = http.createServer((req, res) => {
     const url = req.url;
-
     const filePath = path.join(
         __dirname,
         'public',
@@ -14,9 +13,7 @@ const server = http.createServer((req, res) => {
             ? 'index.html'
             : url
     );
-
     const extName = path.extname(filePath);
-    console.log(`Extname: ${extName}`)
 
     let contentType = 'text/html';
 
@@ -36,20 +33,27 @@ const server = http.createServer((req, res) => {
             break;
     }
 
-    console.log(`File path: ${filePath}`);
-    console.log(`Content type: ${contentType}`);
+    if (extName.length === 0) {
+        console.log(`Not reading file: ${filePath}`);
+    } else {
+        console.log(`Reading file: ${filePath}`);
+        console.log(`Extension name: ${extName}`);
+        console.log(`Content type: ${contentType}`);
 
-    fs.readFile(filePath, (err, data) => {
-        if (err) {
-            console.log(`File reading error: ${err}`)
-        } else {
-            res.writeHead(200, {
-                'Content-Type': contentType
-            });
-            res.write(data);
-            res.end();
-        }
-    });
+        fs.readFile(filePath, (err, data) => {
+            if (err) {
+                console.log(`File reading error: ${err}`)
+            } else {
+                res.writeHead(200, {
+                    'Content-Type': contentType
+                });
+                res.write(data);
+                res.end();
+            }
+        });
+    }
+
+    console.log("--------------------------------------------------");
 });
 
 server.listen(port, () => {

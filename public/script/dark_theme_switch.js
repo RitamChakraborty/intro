@@ -1,7 +1,7 @@
 let lightTheme = true;
 
 function toggleTheme() {
-    const themeSwitch = document.getElementById('brightness');
+    const themeSwitch = document.getElementById("brightness");
     const everything = document.querySelector("*");
 
     if (lightTheme) {

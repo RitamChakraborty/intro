@@ -19,11 +19,11 @@ function setPrimaryTheme() {
     if (themeData['lightTheme']) {
         everything.style.color = "darkslategray";
         everything.style.backgroundColor = "whitesmoke";
-        themeSwitch.src = "./asset/light.svg";
+        themeSwitch.src = "./asset/dark.svg";
     } else {
         everything.style.color = "whitesmoke";
         everything.style.backgroundColor = "darkslategray";
-        themeSwitch.src = "./asset/dark.svg";
+        themeSwitch.src = "./asset/light.svg";
     }
 }
 

@@ -19,12 +19,12 @@ function toggleTheme() {
     const everything = document.querySelector("*");
 
     if (lightTheme) {
-        themeSwitch.src = "./asset/dark.svg";
+        themeSwitch.src = "./asset/light.svg";
         lightTheme = false;
         everything.style.color = "whitesmoke";
         everything.style.backgroundColor = "darkslategray";
     } else {
-        themeSwitch.src = "./asset/light.svg";
+        themeSwitch.src = "./asset/dark.svg";
         lightTheme = true;
         everything.style.color = "darkslategray";
         everything.style.backgroundColor = "whitesmoke";

@@ -15,7 +15,7 @@ The word **Hello** changes to 107 different languages every second.
 
 <p align="center">
     <img alt="Desktop Dark Theme Screenshot" src="public/asset/screenshot/desktop_dark.png" height="384" width="512" hspace="10" vspace="10">
-    <img alt="Mobile Dark Theme Screenshot" src="public/asset/screenshot/mobile_dark.png" height="384" width="254" hspace="10" vspace="10">
+    <img alt="Mobile Dark Theme Screenshot" src="public/asset/screenshot/mobile_dark.png" height="384" width="234" hspace="10" vspace="10">
 </p> 
 
 ### Credit

@@ -7,15 +7,15 @@ The word **Hello** changes to 107 different languages every second.
 **Light Theme**
 
 <p align="center">
-    <img alt="Desktop Light Theme Screenshot" src="./public/asset/screenshot/desktop_light.png" height="256" width="522" hspace="10" vspace="10">
-    <img alt="Mobile Light Theme Screenshot" src="./public/asset/screenshot/mobile_light.png" height="256" width="156" hspace="10" vspace="10">
+    <img alt="Desktop Light Theme Screenshot" src="./public/asset/screenshot/desktop_light.png" height="384" width="512" hspace="10" vspace="10">
+    <img alt="Mobile Light Theme Screenshot" src="./public/asset/screenshot/mobile_light.png" height="384" width="234" hspace="10" vspace="10">
 </p>
 
 **Dark Theme**
 
 <p align="center">
-    <img alt="Desktop Dark Theme Screenshot" src="public/asset/screenshot/desktop_dark.png" height="256" width="522" hspace="10" vspace="10">
-    <img alt="Mobile Dark Theme Screenshot" src="public/asset/screenshot/mobile_dark.png" height="256" width="156" hspace="10" vspace="10">
+    <img alt="Desktop Dark Theme Screenshot" src="public/asset/screenshot/desktop_dark.png" height="384" width="512" hspace="10" vspace="10">
+    <img alt="Mobile Dark Theme Screenshot" src="public/asset/screenshot/mobile_dark.png" height="384" width="254" hspace="10" vspace="10">
 </p> 
 
 ### Credit
